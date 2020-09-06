@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, Route, HashRouter } from "react-router-dom";
 import CustomMessage from "./CustomMessage";
 import Generate from "./Generate";
+
  
 class Home extends Component {
   render() {
