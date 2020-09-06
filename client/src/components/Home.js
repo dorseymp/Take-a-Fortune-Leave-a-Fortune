@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link, Route, HashRouter } from "react-router-dom";
 import CustomMessage from "./CustomMessage";
 import Generate from "./Generate";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
  
 class Home extends Component {
   render() {
