@@ -36,7 +36,7 @@ class CustomMessage extends Component {
       value: this.state.value
     }
 
-    axios.post('http://localhost:5000/api/fortunes', data)
+    axios.post('/api/fortunes', data)
       .then((res) => console.log(res.data))
       .catch((err) => console.log('uh oh'));
     }

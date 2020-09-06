@@ -14,7 +14,7 @@ class Generate extends Component {
   async handleSubmit(event) {
     event.preventDefault();
 
-    const response = await axios.get('http://localhost:5000/api/fortunes')
+    const response = await axios.get('/api/fortunes')
     if (response.status===200) {
       const data = await response.data
       this.setState({values: data})
