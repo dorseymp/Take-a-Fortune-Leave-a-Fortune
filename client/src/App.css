@@ -19,7 +19,7 @@ body {
 }
 
 .submit:hover {
-  background-color: rgb(236, 144, 144);
+  background-color: red;
 }
 
 .submit:active {
@@ -43,7 +43,7 @@ body {
 }
 
 .getFortune:hover {
-  background-color: rgb(236, 144, 144);
+  background-color: red;
 }
 
 .getFortune:active {
@@ -70,6 +70,7 @@ body {
 .theFortune {
   display: table-cell;
   vertical-align: middle;
+  color: rgb(3, 3, 184);
 }
 
 .upperLeftRectangle {
@@ -109,24 +110,22 @@ body {
 }
 
 .btn {
-  font-family: 'Times New Roman', Times, serif;
-  color:  rgb(3, 3, 184);
+  font-family: 'Kaushan Script', cursive;
+  color:  rgb(179, 0, 0);
   font-size:4vw;
 }
 
 .btn:hover {
-  color: rgb(161, 161, 230);
+  color: red;
 }
 
 .btn:focus {
-  background:rgb(161, 161, 230);
-  color: white;
+  color: red;
   box-shadow: none;
 }
 
 .btn:active {
-  background: rgb(161, 161, 230);
-  color: white;
+  color: rgb(179, 0, 0);
 }
 
 .click {
@@ -141,8 +140,8 @@ body {
 
 .typeFortune {
   font-size: 14px;
-  color: rgb(3, 3, 184);
-  border-color:  rgb(3, 3, 184);
+  color: rgb(179, 0, 0);
+  border-color:  rgb(179, 0, 0);
   width: 280px;
   height: 56px;
   resize: none;
@@ -156,5 +155,5 @@ body {
 
 p {
   font-family: 'Times New Roman', Times, serif;
-  color: rgb(3, 3, 184);
+  color: rgb(179, 0, 0);
 }
