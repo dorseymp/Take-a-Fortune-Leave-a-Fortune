@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 body {
-  background-color: lightgray;
+  background-color: rgb(255, 255, 234);
   padding-top: 5%;
   margin: 0;
   font-family: 'Times New Roman', Times, serif;
   color:  rgb(3, 3, 184); 
-  border-radius:20px;
-  background: 
+  /* background: 
     radial-gradient(100px circle at 100px 100px, transparent 100%, white 100%),
     conic-gradient(lightyellow 40%, transparent 0 60%, rgb(250, 250, 203) 0 40%);
   background-size: 200px 200px;
-  background-repeat: space round;
+  background-repeat: round; */
 }
 
 .submit {
@@ -31,8 +30,8 @@ body {
 
 .submit:active {
   background-color: white;
-  color: rgb(179, 0, 0);
-  border: 2px solid rgb(179, 0, 0); 
+  color: red;
+  border: 2px solid red; 
 }
 
 .submit:focus {
@@ -56,8 +55,8 @@ body {
 
 .getFortune:active {
   background-color: white;
-  color: rgb(179, 0, 0);
-  border: 2px solid rgb(179, 0, 0);
+  color: red;
+  border: 2px solid red;
 }
 
 .getFortune:focus {
