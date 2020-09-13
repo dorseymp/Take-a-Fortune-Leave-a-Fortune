@@ -57,7 +57,7 @@ class CustomMessage extends Component {
       {!this.state.submitted ? (
         <div>
           <textarea maxLength="60" className="typeFortune" onChange={this.handleChange}></textarea>
-          <p>Characters remaining: {this.state.charactersRemaining}</p>
+          <p className="charactersRemaining">Characters remaining: {this.state.charactersRemaining}</p>
           <button className='submit' onClick ={this.handleSubmit} value={this.state.value}> Submit </button>
         </div>
         ) : (

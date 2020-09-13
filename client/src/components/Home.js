@@ -6,16 +6,19 @@ import Generate from "./Generate";
 class Home extends Component {
   render() {
     return (
-        <div className="container">
+        <div>
           <HashRouter>
-            <Link to="/generate" className="btn">Take a Fortune,</Link>
-            <Link to="/custommessage" className="btn">Leave a Fortune</Link>
+          {/* <div className="redBox"> */}
+            <Link to="/generate" className="btnLeft">Take a Fortune,</Link>
+            <Link to="/custommessage" className="btnRight"> Leave a Fortune</Link>
+            {/* </div> */}
             <div>
                 {/* <Route exact path="/" component={Home}/> */}
                 <Route exact path="/custommessage" component={CustomMessage}/>
                 <Route exact path="/generate" component={Generate}/>
             </div>
           </HashRouter>
+          
         </div>
     );
   }

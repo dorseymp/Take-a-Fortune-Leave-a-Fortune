@@ -2,70 +2,27 @@
 
 body {
   background-color: rgb(255, 255, 247);
-  padding-top: 5%;
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
-  color:  rgb(3, 3, 184); 
   min-height: 100vh;
-    background: 
-    radial-gradient(90px circle at 100px 100px, transparent 100%, white 100%),
-    conic-gradient(lightyellow 40%, transparent 0 60%, rgb(250, 250, 203) 0 40%);
-  background-size: 200px 200px;
-  background-repeat: round;
+  background: url('./SVG/cookieBackground.svg') no-repeat;
+  background-position: center center; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 
-.submit {
-  font-family: 'Kaushan Script', cursive;
-  background-color: rgb(179, 0, 0);
-  color:  white;
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
+.brokenCookie {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  min-width: 300px;
+  margin-left: -150px;
   margin-top: 20px;
 }
 
-.submit:hover {
-  background-color: red;
-}
-
-.submit:active {
-  background-color: white;
-  color: red;
-  border: 2px solid red; 
-}
-
-.submit:focus {
-  outline: none;
-}
-
-.getFortune {
-  font-family: 'Kaushan Script', cursive;
-  background-color: rgb(179, 0, 0);
-  color:  white;
-  border: none;
-  border-radius: 10px;
-  width: 100px;
-  height: 50px;
-  margin-top: 35px;
-}
-
-.getFortune:hover {
-  background-color: red;
-}
-
-.getFortune:active {
-  background-color: white;
-  color: red;
-  border: 2px solid red;
-}
-
-.getFortune:focus {
-  outline: none;
-}
-
 .fortunePaper {
-  position: relative;
+  position: absolute;
+  z-index: 3;
   display: table;
   background-color: white;
   border-style: solid;
@@ -74,14 +31,16 @@ body {
   width: 280px;
   height: 56px;
   margin: auto;
-  margin-top: 50px;
-  box-shadow: 5px 5px 5px gray;
+  margin-left: 10px;
+  margin-top: -165px;
 }
 
 .theFortune {
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
   color: rgb(3, 3, 184);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .upperLeftRectangle {
@@ -120,53 +79,151 @@ body {
   bottom: -1px;
 }
 
-.btn {
+.redBox {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  padding: 20px;
+  background-color: none;
+  text-align: center;
+}
+
+.getFortune {
+  font-family: 'Kaushan Script', cursive;
+  background-color: rgb(179, 0, 0);
+  color:  white;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.getFortune:hover {
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.getFortune:active {
+  background-color: red;
+  color:white;
+  border: 1px solid red;
+}
+
+.getFortune:focus {
+  outline: none;
+}
+
+.btnLeft {
+  display: inline-block;
+  padding-right: 5px;
   font-family: 'Kaushan Script', cursive;
   color:  rgb(179, 0, 0);
-  font-size:5vw;
 }
 
-.btn:hover {
-  color: red;
+.btnRight {
+  display: inline-block;
+  padding-left: 5px;
+  font-family: 'Kaushan Script', cursive;
+  color: rgb(179, 0, 0);
 }
 
-.btn:focus {
+.btnLeft:hover, .btnRight:hover {
+  text-shadow: 0 0 10px rgb(255, 0, 0);
+  color: rgb(179, 0, 0);
+  text-decoration: none;
+}
+
+.btnLeft:focus, .btnRight:focus {
   color: red;
   box-shadow: none;
+  text-decoration: none;
 }
 
-.btn:active {
-  color: rgb(179, 0, 0);
+.btnLeft:active, .btnRight:active {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
 }
 
 .click {
   margin-top: 25px;
 }
 
-.container {
-  margin: auto;
-  text-align: center;
-  
-}
-
 .typeFortune {
+  position: absolute;
   font-size: 14px;
   color: rgb(179, 0, 0);
   border-color:  rgb(179, 0, 0);
-  width: 280px;
+  min-width: 280px;
+  left: 50%;
+  margin-left: -140px;
   height: 56px;
   resize: none;
   border-width: 1px;
   margin-top: 25px;
-  box-shadow: 5px 5px 5px gray;
-  
+ 
 }
 
 .typeFortune:focus {
-  outline-color: red;
+  outline: none;
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
 }
 
-p {
+.charactersRemaining {
+  position: absolute;
   font-family: 'Times New Roman', Times, serif;
   color: rgb(179, 0, 0);
+  margin-top: 90px;
+  min-width: 280px;
+  left: 50%;
+  margin-left: -140px;
+
+}
+
+.submit {
+  font-family: 'Kaushan Script', cursive;
+  background-color: rgb(179, 0, 0);
+  color:  white;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  margin-top: 150px;
+}
+
+.submit:hover {
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.submit:active {
+  background-color:red;
+  color: white;
+  border: 1px solid red; 
+}
+
+.submit:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .btnRight, .btnLeft {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .btnRight, .btnLeft {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btnRight, .btnLeft {
+    font-size: 30px;
+  }
 }

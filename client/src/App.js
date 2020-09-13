@@ -5,8 +5,10 @@ import Home from "./components/Home";
 class Main extends Component {
   render() {
     return (
-        <div>
+        <div className="container">
+        <div className="redBox">
           <Home/>
+        </div>
         </div>
     );
   }

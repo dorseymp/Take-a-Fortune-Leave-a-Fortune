@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import brokenCookie from "../SVG/brokenCookie.svg";
 
 class Generate extends Component {
   constructor(props) {
@@ -26,16 +27,21 @@ class Generate extends Component {
 render() {
   return (
     <div>
+    <div >
       <button className="getFortune" onClick = { this.handleSubmit }>Get a Fortune</button>
+      
       { this.state.values.map(value =>
+      <div className="brokenCookie">
+      <img  src={ brokenCookie } alt="brokenCookie"></img>
       <div className="fortunePaper">
         <div className="upperRightRectangle"></div>
         <div className="upperLeftRectangle"></div>
         <div className="lowerRightRectangle"></div>
         <div className="lowerLeftRectangle"></div>
         <p key={value.toString()} value={value} className="theFortune">{value.value}</p>
-      </div>
+      </div></div>
       )}
+      </div>
     </div>
   );
 }
