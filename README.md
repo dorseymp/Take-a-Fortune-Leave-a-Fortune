@@ -11,7 +11,7 @@ To run on local machine, run below code.
 ```javascript
 npm run all-install
 ```
-Create .env file containing MongoDB_URI.
+Create .env file in root containing MongoDB_URI.
 
 ```javascript
 MONGODB_URI= *paste link here*
