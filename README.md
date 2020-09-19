@@ -6,6 +6,13 @@ Take a Fortune, Leave a Fortune is a MERN stack application that allows users to
 
 The application can be viewed at [Take a Fortune, Leave a Fortune](https://takeafortuneleaveafortune.herokuapp.com)
 
-## Next Steps
+To run on local machine, run below code.
 
-The loading of the fortune from the database is slow and choppy, so I want to create an svg loading animation and then have the broken fortune cookie and fortune appear smoothly. I'd also like to add transitions between views.
+```javascript
+npm run all-install
+```
+Create .env file containing MongoDB_URI.
+
+```javascript
+MONGODB_URI= *paste link here*
+```
