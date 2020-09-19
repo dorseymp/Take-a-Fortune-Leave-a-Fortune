@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import FadeIn from 'react-fade-in';
 import axios from 'axios';
 
 class CustomMessage extends Component {
   constructor(props) {
     super(props);
+// Initial state for textarea and characters remaining
     this.state = { 
       submitted: false, 
       value: '',
@@ -15,6 +17,7 @@ class CustomMessage extends Component {
     this.handleClear = this.handleClear.bind(this);
   }
 
+// Set character limit
   handleChange(event) {
     const input = event.target.value;
     this.setState({
@@ -22,7 +25,9 @@ class CustomMessage extends Component {
       charactersRemaining: 60 - input.length
     });
   }
-  
+ 
+// If textarea is empty, alert
+// If text is entered, send post request 
   handleSubmit(event) {
     event.preventDefault();
     
@@ -42,6 +47,7 @@ class CustomMessage extends Component {
     }
   }
   
+// Clear textarea after submission 
   handleClear(event) {
     event.preventDefault();
     this.setState ({
@@ -55,15 +61,20 @@ class CustomMessage extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
       {!this.state.submitted ? (
+        <FadeIn delay={500} transitionDuration={1000}>
         <div>
           <textarea maxLength="60" className="typeFortune" onChange={this.handleChange}></textarea>
           <p className="charactersRemaining">Characters remaining: {this.state.charactersRemaining}</p>
           <button className='submit' onClick ={this.handleSubmit} value={this.state.value}> Submit </button>
         </div>
+        </FadeIn>
         ) : (
+      
         <div>
+        <FadeIn delay={500} transitionDuration={1000}>
           <p id ="submittedText">Your message "{this.state.value}" has been submitted!</p>
           <button className='submit' onClick ={this.handleClear} value={this.state.value}> Submit Another </button>
+        </FadeIn>
         </div>
         )}
       </form>

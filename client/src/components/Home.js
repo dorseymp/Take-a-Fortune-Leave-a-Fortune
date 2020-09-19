@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Link, Route, HashRouter } from "react-router-dom";
+import FadeIn from 'react-fade-in';
 import CustomMessage from "./CustomMessage";
 import Generate from "./Generate";
  
 class Home extends Component {
   render() {
     return (
+      <FadeIn delay={500} transitionDuration={1500}>
         <div>
           <HashRouter>
           {/* <div className="redBox"> */}
@@ -20,6 +22,7 @@ class Home extends Component {
           </HashRouter>
           
         </div>
+        </FadeIn>
     );
   }
 }

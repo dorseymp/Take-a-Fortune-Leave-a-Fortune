@@ -4,7 +4,7 @@
   "description": "Users can submit fortunes to the database as well as get a random fortune from the database.",
   "main": "server.js",
   "scripts": {
-    "all-install": "npm install and npm install concurrently && cd client && npm install",
+    "all-install": "npm install and npm install concurrently && cd client && npm install && npm install react-fade-in",
     "go": "concurrently \"npm run start\" \"npm run client\"",
     "start": "node server.js",
     "server": "nodemon --exec babel-node server.js",

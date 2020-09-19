@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import FadeIn from 'react-fade-in';
 import brokenCookie from "../SVG/brokenCookie.svg";
 
 class Generate extends Component {
@@ -12,6 +13,7 @@ class Generate extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+// Get request for fortune
   async handleSubmit(event) {
     event.preventDefault();
 
@@ -28,9 +30,11 @@ render() {
   return (
     <div>
     <div >
+    <FadeIn delay={500} transitionDuration={1000}>
       <button className="getFortune" onClick = { this.handleSubmit }>Get a Fortune</button>
-      
+    </FadeIn>
       { this.state.values.map(value =>
+    <FadeIn delay={500} transitionDuration={1000}>
       <div className="brokenCookie">
       <img  src={ brokenCookie } alt="brokenCookie"></img>
       <div className="fortunePaper">
@@ -39,9 +43,11 @@ render() {
         <div className="lowerRightRectangle"></div>
         <div className="lowerLeftRectangle"></div>
         <p key={value.toString()} value={value} className="theFortune">{value.value}</p>
-      </div></div>
-      )}
       </div>
+      </div>
+    </FadeIn>
+      )}
+    </div>
     </div>
   );
 }
